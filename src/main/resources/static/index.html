@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="vendas">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Venda</title>
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="lib/angularjs/js/angular.min.js"></script>
+<script src="lib/angularjs/js/angular-route.min.js"></script>
+<script type="text/javascript" src="vendas.js"></script>
+<script type="text/javascript" src="produtoCtrl.js"></script>
+<script type="text/javascript" src="clienteCtrl.js"></script>
+<script type="text/javascript" src="vendedorCtrl.js"></script>
+<script type="text/javascript" src="vendaCtrl.js"></script>
+<script type="text/javascript" src="routeConfig.js"></script>
+<style type="text/css">
+#menu {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#corpo {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+</script>
+</head>
+<body>
+	<div class="container" id="menu">
+		<div class="row">
+			<div class="col-md-4">
+				<!-- It can be fixed with bootstrap affix http://getbootstrap.com/javascript/#affix-->
+				<div id="sidebar" class="well sidebar-nav">
+					<h5>
+						<i class="glyphicon glyphicon-home"></i> <small><b>Cadastro</b></small>
+					</h5>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#/produto">Produto</a></li>
+						<li><a href="#/cliente">Cliente</a></li>
+						<li><a href="#/vendedor">Vendedor</a></li>
+						<li><a href="#/venda">Venda</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<!-- Content Here -->
+			</div>
+		</div>
+	</div>
+	<div class="tab-content">
+		<div ng-view></div>
+	</div>
+	<script src="lib/jquery/js/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

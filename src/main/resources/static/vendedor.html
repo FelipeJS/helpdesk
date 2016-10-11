@@ -1,0 +1,47 @@
+<div id="menu3" class="tab-pane fade in active">
+	<!-- Novo produto. -->
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend>Vendedor</legend>
+			<!-- Codigo -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Codigo</label>
+				<div class="col-md-6">
+					<input id="txt_codigo" name="codigo" type="text"
+						placeholder="Coloque aqui o codigo" class="form-control input-md"
+						ng-model="vendedor.codigo">
+				</div>
+			</div>
+			<!-- Nome -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Nome</label>
+				<div class="col-md-6">
+					<input id="txt_nome" name="nome" type="text"
+						placeholder="Coloque aqui o nome" class="form-control input-md"
+						ng-model="vendedor.nome">
+				</div>
+			</div>
+			<!-- Tipo -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">cpf</label>
+				<div class="col-md-6">
+					<input id="txt_tipo" name="tipo" type="text"
+						placeholder="Coloque aqui o CPF" class="form-control input-md" 
+						ng-model="vendedor.cpf">
+				</div>
+			</div>
+			{{vendedor.data}}
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label"></label>
+				<div class="col-md-4">
+					<button type="button" class="btn btn-primary"
+						ng-click="novoVendedor(vendedor)">Novo</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+<!-- Container -->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="helpdesk">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vendas</title>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show active');
+    });
+});
+</script> 
+
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="lib/angularjs/js/angular.min.js"></script>
+<script src="lib/angularjs/js/angular-route.min.js"></script>
+<script type="text/javascript" src="helpdesk.js"></script>
+<script type="text/javascript" src="chamado/chamadoCtrl.js"></script>
+<script type="text/javascript" src="cliente/clienteCtrl.js"></script>
+<script type="text/javascript" src="usuario/usuarioCtrl.js"></script>
+<script type="text/javascript" src="vendedor/vendedorCtrl.js"></script>
+<script type="text/javascript" src="venda/vendaCtrl.js"></script>
+<script type="text/javascript" src="produto/produtoCtrl.js"></script>
+<script type="text/javascript" src="routeConfig.js"></script>
+<style type="text/css">
+#menu {
+	position: relative;
+	list-style-type: none;
+	float:top;
+	width: 300%;
+}
+
+#corpo {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #EFFFFF;
+}
+
+</style>
+</head>
+<body>
+	<div class="container" id="menu">
+		<div class="row">
+			<div class="col-md-4">
+				<!-- It can be fixed with bootstrap affix http://getbootstrap.com/javascript/#affix-->
+				<div id="sidebar" class="well sidebar-nav">
+					<h5>
+						<i class="glyphicon glyphicon-home"></i> <small><b>Cadastro</b></small>
+					</h5>
+					<ul class="nav nav-tabs nav-justified">
+						<li class="menu"><a href="#/produto">Produto</a></li>
+						<li class="menu"><a href="#/cliente">Cliente</a></li>
+						<li class="menu"><a href="#/vendedor">Vendedor</a></li>
+						<li class="menu"><a href="#/venda">Venda</a></li>
+						<li class="menu"><a href="#/usuario">Usuario</a></li>
+						<li class="menu"><a href="#/chamado">Chamados</a></li>
+					</ul>
+	<div class="tab-content">
+		<div ng-view></div>
+	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="lib/jquery/js/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

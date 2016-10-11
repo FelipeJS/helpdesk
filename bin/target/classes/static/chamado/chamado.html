@@ -1,0 +1,77 @@
+<div id="menu1" class="tab-pane fade in active">
+	<!-- Novo cliente. -->
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend align="center">Chamado</legend>
+			<!-- Codigo -->
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="textinput">Codigo</label>
+				<div class="col-md-1">
+					<input id="txt_codigo" type="text" 
+					class="form-control input-md"
+					ng-model="chamado.codigo">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Descricao</label>
+				<div class="col-md-9">
+					<input id="txt_nome" type="text"
+						placeholder="Coloque aqui a descricao" class="form-control input-md"
+						ng-model="chamado.descricao">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="textinput">Requerente</label>
+				<div class="col-md-5">
+					<input id="txt_nome" type="text"
+						placeholder="Nome do requerente" class="form-control input-md"
+						ng-model="chamado.cliente">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Tecnico</label>
+				<div class="col-md-5">
+					<input id="txt_nome" type="text"
+						placeholder="Tenico responsavel" class="form-control input-md"
+						ng-model="chamado.usuario">
+				</div>
+			</div>
+			<!-- Nome -->
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="textinput">Abertura</label>
+				<div class="col-md-2">
+					<input id="txt_nome" type="date"
+						placeholder="Abertura" class="form-control input-md"
+						ng-model="chamado.dataAbertura">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Fechamento</label>
+				<div class="col-md-2">
+					<input id="txt_nome" type="date"
+						placeholder="Fechamento" class="form-control input-md"
+						ng-model="chamado.dataFechamento">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Prioridade</label>
+				<div class="col-md-2">
+					<input id="txt_nome" type="text"
+						placeholder="Coloque aqui a prioridade" class="form-control input-md"
+						ng-model="chamado.prioridade">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Status</label>
+				<div class="col-md-2">
+					<input id="txt_nome" type="text"
+						placeholder="Status da OS" class="form-control input-md"
+						ng-model="chamado.status">
+				</div>
+			</div>
+			<!-- Nome -->
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-1 control-label"></label>
+				<div class="col-md-4">
+					<button type="button" class="btn btn-primary"
+						ng-click="novoChamado(chamado)">Novo</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+<!-- Container -->

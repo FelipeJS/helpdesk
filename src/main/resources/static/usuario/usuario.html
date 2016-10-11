@@ -1,0 +1,34 @@
+<div id="menu1" class="tab-pane fade in active">
+	<!-- Novo cliente. -->
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend align="center">Usuario</legend>
+			<!-- Codigo -->
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="textinput">Codigo</label>
+				<div class="col-md-1">
+					<input id="txt_codigo" type="text"
+						placeholder="Coloque aqui o código" class="form-control input-md"
+						ng-model="usuario.codigo">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Nome</label>
+				<div class="col-md-9">
+					<input id="txt_nome" type="text"
+						placeholder="Coloque aqui o nome" class="form-control input-md"
+						ng-model="usuario.nome">
+				</div>
+			</div>
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-1 control-label"></label>
+				<div class="col-md-4">
+					<button type="button" class="btn btn-primary"
+						ng-click="novoUsuario(usuario)">Novo</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+<!-- Container -->

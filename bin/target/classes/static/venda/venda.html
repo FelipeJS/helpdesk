@@ -1,0 +1,50 @@
+<div id="venda" class="tab-pane fade in active">
+	<!-- Novo venda. -->
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend align="center">Venda</legend>
+			<!-- Codigo -->
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="textinput">Codigo</label>
+				<div class="col-md-5">
+					<input id="txt_codigo" name="codigo" type="text"
+						placeholder="Coloque aqui o codigo" class="form-control input-md"
+						ng-model="venda.codigo">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Vendedor</label>
+				<div class="col-md-5">
+					<input id="txt_nome" name="nome" type="text"
+						placeholder="Coloque aqui o vendedor" class="form-control input-md"
+						ng-model="venda.vendedor.codigo">
+				</div>
+			</div>
+			<!-- Tipo -->
+			<div class="form-group">
+				<label class="col-md-1 control-label" for="textinput">Produto</label>
+				<div class="col-md-5">
+					<input id="txt_tipo" name="tipo" type="text"
+						placeholder="Coloque aqui o produto"
+						class="form-control input-md" ng-model="venda.produto.codigo">
+				</div>
+				<label class="col-md-1 control-label" for="textinput">Cliente</label>
+				<div class="col-md-5">
+					<input id="txt_quantidade" name="quantidade" type="text"
+						placeholder="Coloque aqui o cliente"
+						class="form-control input-md" ng-model="venda.cliente.codigo">
+				</div>
+			</div>
+			{{venda.data}}
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-1 control-label"></label>
+				<div class="col-md-4">
+					<button type="button" class="btn btn-primary"
+						ng-click="novoVenda(venda)">Novo</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+<!-- Container -->
